@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azalea Beauty | Tienda</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    let cart = [];
+
+    function addToCart(productName, price) {
+      cart.push({ productName, price });
+      alert(productName + " agregado al carrito. Total productos: " + cart.length);
+    }
+  </script>
+</head>
+<body class="bg-pink-50 text-gray-800">
+
+<header class="bg-white shadow-md">
+  <div class="container mx-auto flex items-center justify-between p-4">
+    <img src="logo.jpeg" alt="Azalea Beauty Logo" class="h-12 w-auto">
+    <nav class="space-x-4 text-sm md:text-base">
+      <a href="#inicio" class="text-pink-600 hover:underline">Inicio</a>
+      <a href="#tienda" class="text-pink-600 hover:underline">Tienda</a>
+      <a href="#carrito" class="text-pink-600 hover:underline">Carrito</a>
+    </nav>
+  </div>
+</header>
+
+<section id="tienda" class="py-12 bg-white">
+  <h2 class="text-2xl text-center text-pink-700 font-bold mb-8">Catálogo de Productos</h2>
+  <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 px-4 max-w-7xl mx-auto">
+    <div class="bg-pink-50 p-4 rounded-lg shadow">
+      <img src="booster.jpeg" alt="Booster Facial" class="w-full h-48 object-contain">
+      <h3 class="text-pink-800 text-lg font-semibold mt-2">Booster Facial</h3>
+      <p class="text-sm">Amable con el pH, controla el acné, suaviza e hidrata.</p>
+      <p class="text-pink-700 font-bold mt-2">$55.000</p>
+      <button onclick="addToCart('Booster Facial', 55000)" class="mt-2 bg-pink-600 text-white py-1 px-3 rounded-full">Agregar al carrito</button>
+    </div>
+    <div class="bg-pink-50 p-4 rounded-lg shadow">
+      <img src="bruma.jpeg" alt="Bruma Herbal" class="w-full h-48 object-contain">
+      <h3 class="text-pink-800 text-lg font-semibold mt-2">Bruma Herbal</h3>
+      <p class="text-sm">Tonifica, purifica, hidrata y fija el maquillaje.</p>
+      <p class="text-pink-700 font-bold mt-2">$55.000</p>
+      <button onclick="addToCart('Bruma Herbal', 55000)" class="mt-2 bg-pink-600 text-white py-1 px-3 rounded-full">Agregar al carrito</button>
+    </div>
+    <div class="bg-pink-50 p-4 rounded-lg shadow">
+      <img src="gel.jpeg" alt="Gel de Aloe Vera" class="w-full h-48 object-contain">
+      <h3 class="text-pink-800 text-lg font-semibold mt-2">Gel de Aloe Vera</h3>
+      <p class="text-sm">Hidrata 24/7, previene manchas y repara cicatrices.</p>
+      <p class="text-pink-700 font-bold mt-2">$60.000</p>
+      <button onclick="addToCart('Gel de Aloe Vera', 60000)" class="mt-2 bg-pink-600 text-white py-1 px-3 rounded-full">Agregar al carrito</button>
+    </div>
+    <div class="bg-pink-50 p-4 rounded-lg shadow">
+      <img src="foto.jpeg" alt="Protector Solar Mineral" class="w-full h-48 object-contain">
+      <h3 class="text-pink-800 text-lg font-semibold mt-2">Protector Solar Mineral</h3>
+      <p class="text-sm">SPF 50+, toque seco, unifica el tono de tu piel.</p>
+      <p class="text-pink-700 font-bold mt-2">$94.500</p>
+      <button onclick="addToCart('Protector Solar Mineral', 94500)" class="mt-2 bg-pink-600 text-white py-1 px-3 rounded-full">Agregar al carrito</button>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-pink-100 text-center text-sm py-6">
+  <p>Contacto: azaleabeautycol@gmail.com | WhatsApp: 300 439 7012</p>
+  <p>@azaleabeautycol</p>
+</footer>
+
+</body>
+</html>
